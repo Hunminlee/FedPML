@@ -1,8 +1,6 @@
 from keras.models import Sequential
-from keras.layers import Conv1D, MaxPooling1D, Flatten, Dense, Conv2D, MaxPooling2D, LocallyConnected2D, BatchNormalization, Dropout
+from keras.layers import Conv1D, MaxPooling1D, Flatten, Dense, Conv2D, MaxPooling2D, BatchNormalization, Dropout
 from keras.utils import to_categorical
-from tensorflow.keras.layers import LocallyConnected2D
-
 
 
 def build_model(num_classes):
