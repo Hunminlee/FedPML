@@ -30,6 +30,28 @@ def plot(result):
     plt.show()
 
 
+def FL_plot(val_acc, val_loss):
+
+    plt.figure(figsize=(13,4))
+
+    plt.subplot(1,2,1)
+    plt.plot(range(len(val_loss)),val_loss,label = "Validation Loss", marker = "o", c="red")
+    plt.title('Model Loss')
+    plt.ylabel('Loss')
+    plt.xlabel('Global communication round')
+    plt.grid()
+    plt.legend(loc='upper right')
+
+    plt.subplot(1,2,2)
+    plt.plot(range(len(val_acc)),val_acc,label = "Validation Accuracy", marker = "o", c="blue")
+    plt.title('Model Acc')
+    plt.ylabel('Acc')
+    plt.xlabel('Global communication round')
+    plt.grid()
+    plt.legend(loc='upper left')
+    plt.show()
+
+
 from collections import deque
 
 class Queue:
