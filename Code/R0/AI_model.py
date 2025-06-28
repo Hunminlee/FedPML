@@ -16,7 +16,7 @@ def build_model(num_classes):
     model.add(Dropout(dr))
     model.add(Dense(num_classes, kernel_initializer='he_normal', name="dense2", activation="softmax"))
 
-    model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['acc'])
-    model.build((None, 2, 128, 1))
+    #model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['acc'])
+    #model.build((None, 2, 128, 1))
 
     return model
